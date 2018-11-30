@@ -26,6 +26,8 @@ submit.on('click', function() {
 
     console.log(filtered);
 
+    tbody.html('');
+
     //loop through filtered and console.log
     filtered.forEach(function(sighting) {
 
