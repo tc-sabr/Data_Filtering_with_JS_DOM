@@ -26,4 +26,23 @@ submit.on('click', function() {
 
     console.log(filtered);
 
+    //loop through filtered and console.log
+    filtered.forEach(function(sighting) {
+
+        console.log(sighting);
+
+        //create new row for data
+        var row = tbody.append('tr');
+
+        //set object entries and console log each sighting
+        Object.entries(sighting).forEach(function([key, value]) {
+            console.log(key, value);
+
+            //append data to cells
+            var cell = row.append('td').text(value);
+    
+        });
+    
+    });
+
 });
